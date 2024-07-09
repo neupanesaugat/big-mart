@@ -29,7 +29,7 @@ app.post("/product/add", (req, res) => {
 // get product detail by id
 app.get("/product/detail/:id", (req, res) => {
   //? :id is dynamic value of id (eg 1,2,3,etc..)
-  const productID = +req.params.id; //? + for type conversion (string to number)
+  const productID = req.params.id; //? + for type conversion (string to number)
 
   const product = productList.find((item) => {
     return item.id === productID;
